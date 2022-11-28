@@ -4,17 +4,13 @@ import "../CommentArea/CommentArea";
 import CommentArea from "../CommentArea/CommentArea";
 // import fantasyBook from "../../Data/books/fantasy.json";
 //How can I do it with {book}
-const SingleBook = (props) => {
+const SingleBook = ({ book }) => {
   return (
-    <Card key={this.props.book.asin} style={{ width: "18rem" }}>
-      <Card.Img
-        variant="top"
-        src={this.props.book.img}
-        alt={this.props.book.title}
-      />
+    <Card key={book.asin} style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={book.img} alt={book.title} />
       <Card.Body>
-        <Card.Title class="red-text">{this.props.book.title}</Card.Title>
-        <CommentArea bookId={this.props.book.asin} />
+        <Card.Title class="red-text">{book.title}</Card.Title>
+        <CommentArea bookId={book.asin} />
       </Card.Body>
     </Card>
   );
